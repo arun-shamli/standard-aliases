@@ -92,7 +92,7 @@ Commands
 **ty, type1** | <code># Checks if com</code>[**`...`**](../standard_functions#L535-L555) | Print command type or definition.
 **c** | <code>cat "$@"</code> | Print file contents.
 **?** | <code>echo $?</code> | Print exit code of last command.
-**cl, clr** | <code>clear</code> | Clear the screen.
+**cl, clr ,cls** | <code>clear</code> | Clear the screen.
 **re** | <code>reset "$@"</code> | Reset the screen.
 **q** | <code>exit</code> | Exit bash shell.
 **o, openFile** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L585-L587) | Open file with default app.

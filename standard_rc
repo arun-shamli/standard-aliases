@@ -96,7 +96,7 @@ ba : Start new bash shell.
 ty, type1 : Print command type or definition.
 c : Print file contents.
 ? : Print exit code of last command.
-cl, clr : Clear the screen.
+cl, clr ,cls : Clear the screen.
 re : Reset the screen.
 q : Exit bash shell.
 o, openFile : Open file with default app.
