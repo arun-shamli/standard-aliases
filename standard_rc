@@ -63,9 +63,9 @@ cdiso : Mount iso and cd into.
 
 # FILES #
 
-cp : Copy files safely.
-mv : Move files safely.
-rm : Delete files safely.
+#cp : Copy files safely.
+#mv : Move files safely.
+#rm : Delete files safely.
 cpdir : Copy directories safely.
 mvdir : Move directories safely.
 rmdir : Delete directories safely.

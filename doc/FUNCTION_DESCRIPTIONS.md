@@ -51,9 +51,9 @@ Commands
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**cp** | <code>cp --interactiv</code>[**`...`**](../standard_functions#L375-L377) | Copy files safely.
-**mv** | <code>mv --interactiv</code>[**`...`**](../standard_functions#L381-L383) | Move files safely.
-**rm** | <code>rm --interactiv</code>[**`...`**](../standard_functions#L388-L390) | Delete files safely.
+**#cp** | <code>cp --interactiv</code>[**`...`**](../standard_functions#L375-L377) | Copy files safely.
+**#mv** | <code>mv --interactiv</code>[**`...`**](../standard_functions#L381-L383) | Move files safely.
+**#rm** | <code>rm --interactiv</code>[**`...`**](../standard_functions#L388-L390) | Delete files safely.
 **cpdir** | <code>cp --interactiv</code>[**`...`**](../standard_functions#L394-L396) | Copy directories safely.
 **mvdir** | <code>mv --interactiv</code>[**`...`**](../standard_functions#L400-L402) | Move directories safely.
 **rmdir** | <code>rm --interactiv</code>[**`...`**](../standard_functions#L407-L409) | Delete directories safely.
