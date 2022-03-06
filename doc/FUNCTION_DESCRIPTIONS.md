@@ -54,6 +54,9 @@ Commands
 **d** | <code>ls -l &#124; grep "^</code>[**`...`**](../standard_functions#L374-L376) | List directories only.
 **f** | <code>ls -al &#124;grep "^</code>[**`...`**](../standard_functions#L379-L381) | List files only.
 **h** | <code>__listFilesOnly</code>[**`...`**](../standard_functions#L384-L386) | List hidden files only.
+**# cp** | <code>cp --interactiv</code>[**`...`**](../standard_functions#L390-L392) | Copy files safely.
+**# mv** | <code>mv --interactiv</code>[**`...`**](../standard_functions#L396-L398) | Move files safely.
+**# rm** | <code>rm --interactiv</code>[**`...`**](../standard_functions#L403-L405) | Delete files safely.
 **cpdir** | <code>cp --interactiv</code>[**`...`**](../standard_functions#L409-L411) | Copy directories safely.
 **mvdir** | <code>mv --interactiv</code>[**`...`**](../standard_functions#L415-L417) | Move directories safely.
 **rmdir** | <code>rm --interactiv</code>[**`...`**](../standard_functions#L422-L424) | Delete directories safely.
