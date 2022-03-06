@@ -63,9 +63,12 @@ cdiso : Mount iso and cd into.
 
 # FILES #
 
-#cp : Copy files safely.
-#mv : Move files safely.
-#rm : Delete files safely.
+d : List directories only.
+f : List files only.
+h : List hidden files only.
+ : Copy files safely.
+ : Move files safely.
+ : Delete files safely.
 cpdir : Copy directories safely.
 mvdir : Move directories safely.
 rmdir : Delete directories safely.
@@ -75,7 +78,7 @@ switch : Switch contents of files.
 
 # PWD #
 
-# p : Print working directory or path to file.
+ : Print working directory or path to file.
 
 # ECHO #
 
@@ -110,12 +113,11 @@ me, makeExecutable : Make file executable or create new bash or python script.
 
 # HISTORY #
 
-# h, history1 : Search command history for pattern.
 history1 : Search command history for pattern.
 
 # TEXT EDITORS #
 
-v : Edit file with vim.
+v , vi : Edit file with vim.
 vv : View file in vim.
 n, nano1 : Edit file with nano.
 nv : View file in nano.
@@ -124,8 +126,9 @@ sub : Edit file with sublime text.
 
 # SUDO #
 
+root : Switch to root.
 s : Execute command as super user.
-# f, please : Execute last command as super user.
+ : Execute last command as super user.
 sudoCp : Copy files safely as super user.
 smv : Move files safely as super user.
 srm : Delete files safely as super user.
@@ -226,7 +229,8 @@ repeat : Turn on key repeat.
 # MISC #
 
 blue : Change hue of color blue in linux terminal.
-# path : List directories contained in path variable.
+path : List directories contained in path variable.
+libpath : List directories contained in libpath variable.
 bc1 : Run terminal calculator that supports decimal numbers.
 hd1 : Print hexadecimal representation of file or stream.
 profile : Run profile script.

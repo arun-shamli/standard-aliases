@@ -370,6 +370,21 @@ __mountIsoAndCdInto() {
 # FILES #
 #########
 
+# list all the directires in the current folder
+__listDirectoriesOnly() {
+  ls -l | grep "^d"
+}
+
+# list all the file in the current folder. Exclude directories and hidden
+__listFilesOnly() {
+  ls -al |grep "^[^d]" | grep -v "^total"
+}
+
+# list all the file in the current folder. Exclude directories and hidden
+__listHiddenFilesOnly() {
+  __listFilesOnly | grep " \."
+}
+
 # Runs cp in interactive mode (asks before it overwrites
 # anything).
 __copyFilesSafely() {
@@ -762,6 +777,11 @@ __editFileWithSublimeText() {
 ########
 # SUDO #
 ########
+
+# switch to root
+__switchToRoot(){
+  sudo su - root
+}
 
 # Runs command as sudo.
 __executeCommandAsSuperUser() {
@@ -1291,8 +1311,14 @@ __changeHueOfColorBlueInLinuxTerminal() {
 
 # Prints PATH variable, each entry in its own line.
 __listDirectoriesContainedInPathVariable() {
-  echo -e ${PATH//:/\\n}
+  echo -e ${PATH//:/\\n} | sort | egrep -v "^$"
 }
+
+# Prints LIBPATH variable, each entry in its own line.
+__listDirectoriesContainedInLibpathVariable() {
+  echo -e  ${LD_LIBRARY_PATH//:/\\n} | sort | egrep -v "^$"
+}
+
 
 # Runs console calculator with decimal numbers.
 __runTerminalCalculatorThatSupportsDecimalNumbers() {
@@ -1354,7 +1380,7 @@ __installPackage() {
 
 # Updates package information.
 __updateInformationAboutAvailablePackages() {
-  sudo apt-get update
+  sudo apt-get update  && sudo apt-get upgrade -y
 }
 
 # Upgrades all packages to newest available version.
