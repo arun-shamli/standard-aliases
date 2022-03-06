@@ -444,6 +444,36 @@ __switchContentsOfFiles() {
   sudo cp -f --no-preserve=mode,ownership "$tempFile" "$2"
 }
 
+# find in file, including subdirectories. case sensitive
+__findInFiles(){
+    echo '*********************** FIND IN FILES START ***********************';
+    if [ $# -eq 0 ]; then
+        echo Missing search argument;
+    else
+        if [ $# -eq 1 ]; then
+            find . -type f -print | xargs grep -n "${1}";
+        else
+            find . -type f -name "${2}" -print | xargs grep -n "${1}";
+        fi;
+    fi;
+    echo '************************ FIND IN FILES END ************************'
+}
+# find in file, including subdirectories. case insensitive
+__findInFilesIgnoreCase(){
+
+    echo '*********************** FIND IN FILES START ***********************';
+    if [ $# -eq 0 ]; then
+        echo Missing search argument;
+    else
+        if [ $# -eq 1 ]; then
+            find . -type f -print | xargs grep -i -n "${1}";
+        else
+            find . -type f -name "${2}" -print | xargs grep -i -n "${1}";
+        fi;
+    fi;
+    echo '************************ FIND IN FILES END ************************'
+}
+
 
 #######
 # PWD #
@@ -2042,3 +2072,164 @@ __printKubectlShortVersion(){
   kubectl version --client --short
 }
 
+###############################################################################
+## ARUN's Functions
+export WORKHOME=~;
+echo "Work home is ${WORKHOME}"
+
+export CONFIG=${WORKHOME}/.standard_aliases;
+
+export JAVA_HOME=${WORKHOME}/Java/jdk-16.0.2
+export JAVA_BIN=${JAVA_HOME}/bin
+export MAVEN_HOME=${WORKHOME}/maven/apache-maven-3.8.2/
+export MAVEN_BIN=${MAVEN_HOME}/bin
+export PATH=${JAVA_BIN}:${MAVEN_BIN}:${PATH}
+export HISTFILE=${CONFIG}/bash_history
+export HISTIGNORE="h:history:pwd:exit:df:ls:ls -la:ll"
+
+###############################################################################
+
+function set_prompt()
+{
+    PS1='\[\033]0;:$PWD\007\]'
+    PS1="$PS1"'\[\033[32m\]\T'              #time in green
+    PS1="$PS1"'\[\033[35m\]'       # change to purple
+    PS1="$PS1"'[\u@\H]'
+    PS1="$PS1"'\[\033[33m\]'       # change to brownish yellow
+    PS1="$PS1""\$PWD"                 # current working directory
+    PS1="$PS1"'\[\033[0m\]'        # change color
+    PS1="$PS1"'\n'                 # new line
+    PS1="$PS1"'$>'                 # prompt: always $
+}
+
+#############################################################################
+
+function pullgt()
+{
+  pulldataviz
+  pullfsf
+}
+
+#############################################################################
+
+function pulldataviz()
+{
+  local current_dir=${PWD}
+  pullfolder "/c/Work/Gtech/Repos/DataViz/Instructor"
+  cd ${current_dir}
+}
+
+#############################################################################
+
+function pullfsf()
+{
+  local current_dir=${PWD}
+  pullfolder "/c/Work/Gtech/Repos/FSF"
+  cd ${current_dir}
+}
+
+#############################################################################
+
+function pullfolder()
+{
+  local current_dir=${1}
+  echo "********pulling all subdirectories from ${current_dir}********"
+  cd ${current_dir}
+
+  for f in $(echo */);
+  do
+    fullpath=$(readlink -f $f);
+    echo "Now gettinng ${fullpath}*********"
+    pull ${fullpath}
+  done
+
+}
+
+
+#############################################################################
+
+function pull()
+{
+  local parent_dir=${PWD}
+  local current_dir=${1}
+        echo "********pulling ${current_dir}********"
+        cd ${current_dir}
+        git pull;
+  cd ${parent_dir}
+}
+
+#############################################################################
+function clonegt()
+{
+        local current_dir=${PWD}
+        cd "/C/Work/GTECH/GitHub"
+        git clone git@github.com:coding-boot-camp/curriculum-dev-docs.git
+        git clone git@github.com:coding-boot-camp/machine_learning.git
+        git clone git@github.com:coding-boot-camp/DataViz-Lesson-Plans.git
+        git clone git@github.com:coding-boot-camp/panopto-work-around.git
+        cd "/C/Work/GTECH/GitLab"
+        git clone git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GT-PTP-DATA-PT-08-2019-U-C.git
+        cd ${current_dir}
+}
+
+###############################################################################
+
+function git_clean_untracked_safely()
+{
+  TO_REMOVE=$(git clean -f -d -n);
+  if [[ "$TO_REMOVE" != "" ]] && [[ `echo $TO_REMOVE | wc -l | bc` != "0" ]]; then
+    echo "Cleaning...";
+    printf "\n$TO_REMOVE\n\n";
+    echo "Proceed?";
+
+    select result in Yes No; do
+      if [[ "$result" == "Yes" ]]; then
+        echo "Cleaning in progress...";
+        echo "";
+        git clean -f -d;
+        echo "";
+        echo "All files and directories removed!";
+      fi
+      break;
+    done;
+  else
+    echo "Everything is clean";
+  fi;
+}
+
+###################################################################################
+
+function git_clean_local_branches {
+  OPTION="-d";
+  if [[ "$1" == "-f" ]]; then
+    echo "WARNING! Removing with force";
+    OPTION="-D";
+  fi;
+
+  TO_REMOVE=`git branch -r | awk "{print \\$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \\$1}"`;
+  if [[ "$TO_REMOVE" != "" ]] && [[ `echo $TO_REMOVE | wc -l | bc` != "0" ]]; then
+    echo "Removing branches...";
+    echo "";
+    printf "\n$TO_REMOVE\n\n";
+    echo "Proceed?";
+
+    select result in Yes No; do
+      if [[ "$result" == "Yes" ]]; then
+        echo "Removing in progress...";
+        echo "$TO_REMOVE" | xargs git branch "$OPTION";
+        if [[ "$?" -ne "0" ]]; then
+          echo ""
+          echo "Some branches was not removed, you have to do it manually!";
+        else
+          echo "All branches removed!";
+        fi
+      fi
+
+      break;
+    done;
+  else
+    echo "You have nothing to clean";
+  fi
+}
+
+############################################################################################

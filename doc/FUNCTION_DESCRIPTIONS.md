@@ -60,6 +60,8 @@ Commands
 **mk, md, mkdir1** | <code>mkdir --parents</code>[**`...`**](../standard_functions#L428-L431) | Create directory and descend into.
 **bk, backup** | <code>sudo cp --prese</code>[**`...`**](../standard_functions#L435-L437) | Backup file.
 **switch** | <code>tempFile=$(mkte</code>[**`...`**](../standard_functions#L440-L445) | Switch contents of files.
+**fif** | <code>#!/bin/bash</code> | Find in files.
+**fifi** | <code>#!/bin/bash</code> | Find in files ignore case.
 
 ###  Pwd 
 
@@ -78,36 +80,36 @@ Commands
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**rb, runInBackground** | <code>nohup "$@" &>/d</code>[**`...`**](../standard_functions#L489-L491) | Run command in background.
+**rb, runInBackground** | <code>nohup "$@" &>/d</code>[**`...`**](../standard_functions#L519-L521) | Run command in background.
 
 ###  Basics 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**ef, editFunctions** | <code>"$EDITOR" ~/.st</code>[**`...`**](../standard_functions#L500-L502) | Edit standard aliases.
-**er, editUsersRc** | <code>"$EDITOR" ~/.st</code>[**`...`**](../standard_functions#L504-L506) | Edit users standard rc.
-**er1, editProjectsRc** | <code>projectLocation</code>[**`...`**](../standard_functions#L508-L511) | Edit projects standard rc.
+**ef, editFunctions** | <code>"$EDITOR" ~/.st</code>[**`...`**](../standard_functions#L530-L532) | Edit standard aliases.
+**er, editUsersRc** | <code>"$EDITOR" ~/.st</code>[**`...`**](../standard_functions#L534-L536) | Edit users standard rc.
+**er1, editProjectsRc** | <code>projectLocation</code>[**`...`**](../standard_functions#L538-L541) | Edit projects standard rc.
 **ba** | <code>bash "$@"</code> | Start new bash shell.
-**ty, type1** | <code># Checks if com</code>[**`...`**](../standard_functions#L550-L570) | Print command type or definition.
+**ty, type1** | <code># Checks if com</code>[**`...`**](../standard_functions#L580-L600) | Print command type or definition.
 **c** | <code>cat "$@"</code> | Print file contents.
 **?** | <code>echo $?</code> | Print exit code of last command.
 **cl, clr ,cls** | <code>clear</code> | Clear the screen.
 **re** | <code>reset "$@"</code> | Reset the screen.
 **q** | <code>exit</code> | Exit bash shell.
-**o, openFile** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L600-L602) | Open file with default app.
-**te, terminal** | <code>x-terminal-emul</code>[**`...`**](../standard_functions#L605-L607) | Open new terminal with same working directory.
+**o, openFile** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L630-L632) | Open file with default app.
+**te, terminal** | <code>x-terminal-emul</code>[**`...`**](../standard_functions#L635-L637) | Open new terminal with same working directory.
 **to** | <code>touch  "$@"</code> | Update files timestamp or create new one.
 **da** | <code>date  "$@"</code> | Print date and time.
-**ma, make1** | <code>make  "$@" 2>&1</code>[**`...`**](../standard_functions#L625-L629) | Run make with pager.
-**na, explorer** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L637-L639) | Start file explorer in background in working directory.
-**diff1** | <code>colordiff  "$@"</code>[**`...`**](../standard_functions#L643-L645) | Compare files line by line in color.
-**me, makeExecutable** | <code>if [[ ! -f "$1"</code>[**`...`**](../standard_functions#L650-L698) | Make file executable or create new bash or python script.
+**ma, make1** | <code>make  "$@" 2>&1</code>[**`...`**](../standard_functions#L655-L659) | Run make with pager.
+**na, explorer** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L667-L669) | Start file explorer in background in working directory.
+**diff1** | <code>colordiff  "$@"</code>[**`...`**](../standard_functions#L673-L675) | Compare files line by line in color.
+**me, makeExecutable** | <code>if [[ ! -f "$1"</code>[**`...`**](../standard_functions#L680-L728) | Make file executable or create new bash or python script.
 
 ###  History 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**history1** | <code>if [ "$#" -eq 0</code>[**`...`**](../standard_functions#L707-L718) | Search command history for pattern.
+**history1** | <code>if [ "$#" -eq 0</code>[**`...`**](../standard_functions#L737-L748) | Search command history for pattern.
 
 ###  Text Editors 
 
@@ -115,10 +117,10 @@ Commands
 :------------- |:--------:| ----------------
 **v , vi** | <code>vim -p "$@"</code> | Edit file with vim.
 **vv** | <code>view -p "$@"</code> | View file in vim.
-**n, nano1** | <code>nano --undo --a</code>[**`...`**](../standard_functions#L747-L749) | Edit file with nano.
-**nv** | <code>nano --view --u</code>[**`...`**](../standard_functions#L761-L763) | View file in nano.
-**g, gedit1** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L767-L769) | Edit file with gedit.
-**sub** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L772-L774) | Edit file with sublime text.
+**n, nano1** | <code>nano --undo --a</code>[**`...`**](../standard_functions#L777-L779) | Edit file with nano.
+**nv** | <code>nano --view --u</code>[**`...`**](../standard_functions#L791-L793) | View file in nano.
+**g, gedit1** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L797-L799) | Edit file with gedit.
+**sub** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L802-L804) | Edit file with sublime text.
 
 ###  Sudo 
 
@@ -126,28 +128,28 @@ Commands
 :------------- |:--------:| ----------------
 **root** | <code>#!/bin/bash</code> | Switch to root.
 **s** | <code>sudo "$@"</code> | Execute command as super user.
-**sudoCp** | <code>sudo cp --inter</code>[**`...`**](../standard_functions#L799-L801) | Copy files safely as super user.
-**smv** | <code>sudo mv --inter</code>[**`...`**](../standard_functions#L805-L807) | Move files safely as super user.
-**srm** | <code>sudo rm --inter</code>[**`...`**](../standard_functions#L812-L814) | Delete files safely as super user.
-**scpdir** | <code>sudo cp --inter</code>[**`...`**](../standard_functions#L818-L820) | Copy directories safely as super user.
-**smvdir** | <code>sudo mv --inter</code>[**`...`**](../standard_functions#L824-L826) | Move directories safely as super user.
-**srmdir** | <code>sudo rm --inter</code>[**`...`**](../standard_functions#L831-L833) | Delete directories safely as super user.
-**sm, sle** | <code>sudo less --RAW</code>[**`...`**](../standard_functions#L841-L843) | Display text or file in pager as super user.
+**sudoCp** | <code>sudo cp --inter</code>[**`...`**](../standard_functions#L829-L831) | Copy files safely as super user.
+**smv** | <code>sudo mv --inter</code>[**`...`**](../standard_functions#L835-L837) | Move files safely as super user.
+**srm** | <code>sudo rm --inter</code>[**`...`**](../standard_functions#L842-L844) | Delete files safely as super user.
+**scpdir** | <code>sudo cp --inter</code>[**`...`**](../standard_functions#L848-L850) | Copy directories safely as super user.
+**smvdir** | <code>sudo mv --inter</code>[**`...`**](../standard_functions#L854-L856) | Move directories safely as super user.
+**srmdir** | <code>sudo rm --inter</code>[**`...`**](../standard_functions#L861-L863) | Delete directories safely as super user.
+**sm, sle** | <code>sudo less --RAW</code>[**`...`**](../standard_functions#L871-L873) | Display text or file in pager as super user.
 **sv, se** | <code>sudoedit "$@"</code> | Edit file with vim as super user.
-**svv** | <code>sudo view -p "$</code>[**`...`**](../standard_functions#L853-L855) | View file in vim as super user.
-**sn** | <code>sudo nano --und</code>[**`...`**](../standard_functions#L867-L869) | Edit file with nano as super user.
-**sg** | <code>sudo gedit  "$@</code>[**`...`**](../standard_functions#L873-L875) | Edit file with gedit as super user.
+**svv** | <code>sudo view -p "$</code>[**`...`**](../standard_functions#L883-L885) | View file in vim as super user.
+**sn** | <code>sudo nano --und</code>[**`...`**](../standard_functions#L897-L899) | Edit file with nano as super user.
+**sg** | <code>sudo gedit  "$@</code>[**`...`**](../standard_functions#L903-L905) | Edit file with gedit as super user.
 
 ###  Procesess 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
 **taskManager, ht** | <code>htop  "$@"</code> | Run terminal task manager.
-**ps1** | <code>ps  "$@" &#124; __pr</code>[**`...`**](../standard_functions#L962-L964) | Print users processes.
-**psa, pse, processes** | <code>ps -e  "$@" &#124; _</code>[**`...`**](../standard_functions#L968-L970) | Print all processes.
-**pgrep1** | <code>pgrep --list-na</code>[**`...`**](../standard_functions#L975-L977) | Find processes with part of name.
+**ps1** | <code>ps  "$@" &#124; __pr</code>[**`...`**](../standard_functions#L992-L994) | Print users processes.
+**psa, pse, processes** | <code>ps -e  "$@" &#124; _</code>[**`...`**](../standard_functions#L998-L1000) | Print all processes.
+**pgrep1** | <code>pgrep --list-na</code>[**`...`**](../standard_functions#L1005-L1007) | Find processes with part of name.
 **kill1** | <code>kill -9 "$@"</code> | Kill process with kill signal.
-**st, strace1, trace** | <code>strace -s\ 2000</code>[**`...`**](../standard_functions#L994-L997) | Trace system calls.
+**st, strace1, trace** | <code>strace -s\ 2000</code>[**`...`**](../standard_functions#L1024-L1027) | Trace system calls.
 
 ###  Text 
 
@@ -160,53 +162,53 @@ Commands
 **ta1, lastLine** | <code>tail -n1 "$@"</code> | Print last line.
 **wcl, countLines** | <code>wc -l "$@"</code> | Count lines.
 **wcw, countWords** | <code>wc -w "$@"</code> | Count words.
-**trd** | <code>tr --delete "$@</code>[**`...`**](../standard_functions#L1041-L1043) | Delete characters.
-**loc, linesOfCode** | <code>rootDir="$PWD"</code>[**`...`**](../standard_functions#L1048-L1064) | Count lines in files with extension in working and subdirectories.
+**trd** | <code>tr --delete "$@</code>[**`...`**](../standard_functions#L1071-L1073) | Delete characters.
+**loc, linesOfCode** | <code>rootDir="$PWD"</code>[**`...`**](../standard_functions#L1078-L1094) | Count lines in files with extension in working and subdirectories.
 
 ###  Tables 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**table** | <code>column -t -s "$</code>[**`...`**](../standard_functions#L1073-L1075) | Line up columns.
-**cut1, keepColumns** | <code>cut --delimiter</code>[**`...`**](../standard_functions#L1081-L1083) | Keep columns.
-**sort1** | <code>sort --field-se</code>[**`...`**](../standard_functions#L1089-L1091) | Sort lines by column.
+**table** | <code>column -t -s "$</code>[**`...`**](../standard_functions#L1103-L1105) | Line up columns.
+**cut1, keepColumns** | <code>cut --delimiter</code>[**`...`**](../standard_functions#L1111-L1113) | Keep columns.
+**sort1** | <code>sort --field-se</code>[**`...`**](../standard_functions#L1119-L1121) | Sort lines by column.
 
 ###  Search 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**grep1** | <code>grep --color=au</code>[**`...`**](../standard_functions#L1104-L1106) | Print lines containing pattern.
-**gr** | <code>__printLinesCon</code>[**`...`**](../standard_functions#L1110-L1113) | Print or display with pager lines containing pattern.
-**grr** | <code>__printLinesCon</code>[**`...`**](../standard_functions#L1117-L1123) | Print or display with pager numbered lines containing pattern in working and subdirectories.
-**lo, locate1** | <code>locate  "$1" \</code>[**`...`**](../standard_functions#L1128-L1132) | Locate files on filesystem containing pattern in their names.
-**find1** | <code>find . -not -iw</code>[**`...`**](../standard_functions#L1139-L1143) | Locate files containing pattern in their names in working and sub directories.
+**grep1** | <code>grep --color=au</code>[**`...`**](../standard_functions#L1134-L1136) | Print lines containing pattern.
+**gr** | <code>__printLinesCon</code>[**`...`**](../standard_functions#L1140-L1143) | Print or display with pager lines containing pattern.
+**grr** | <code>__printLinesCon</code>[**`...`**](../standard_functions#L1147-L1153) | Print or display with pager numbered lines containing pattern in working and subdirectories.
+**lo, locate1** | <code>locate  "$1" \</code>[**`...`**](../standard_functions#L1158-L1162) | Locate files on filesystem containing pattern in their names.
+**find1** | <code>find . -not -iw</code>[**`...`**](../standard_functions#L1169-L1173) | Locate files containing pattern in their names in working and sub directories.
 
 ###  Archives 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**extract** | <code>if [ -z "$1" ];</code>[**`...`**](../standard_functions#L1152-L1185) | Extract archive of any type.
+**extract** | <code>if [ -z "$1" ];</code>[**`...`**](../standard_functions#L1182-L1215) | Extract archive of any type.
 
 ###  Terminal Multiplexer 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
 **tm, mu** | <code>tmux  "$@"</code> | Run terminal multiplexer.
-**tma, mua** | <code>tmux attach "$@</code>[**`...`**](../standard_functions#L1199-L1201) | Run terminal multiplexer and attach to last session.
+**tma, mua** | <code>tmux attach "$@</code>[**`...`**](../standard_functions#L1229-L1231) | Run terminal multiplexer and attach to last session.
 **tml, mul** | <code>tmux ls</code> | List terminal multiplexers sessions.
 
 ###  System Information 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**ds** | <code>#!/bin/bash</code> | Print Space used by each directory
-**df1** | <code>df -h &#124; grep "s</code>[**`...`**](../standard_functions#L1217-L1219) | Print available disk space in simplified form.
-**du1** | <code>du --summarize </code>[**`...`**](../standard_functions#L1223-L1225) | Print disk space occupied by file or folder.
-**fr, free1** | <code>echo "all:  "$(</code>[**`...`**](../standard_functions#L1228-L1235) | Print all and free memory space in megabytes.
+**ds** | <code>#!/bin/bash</code> | Print space used by each directory.
+**df1** | <code>df -h &#124; grep "s</code>[**`...`**](../standard_functions#L1247-L1249) | Print available disk space in simplified form.
+**du1** | <code>du --summarize </code>[**`...`**](../standard_functions#L1253-L1255) | Print disk space occupied by file or folder.
+**fr, free1** | <code>echo "all:  "$(</code>[**`...`**](../standard_functions#L1258-L1265) | Print all and free memory space in megabytes.
 **temp, temperature** | <code>acpi -t</code> | Print temperature of cpu.
 **batt, battery** | <code>acpi</code> | Print battery status.
 **uname1, kernelVersion** | <code>uname --all</code> | Print operating system information.
-**pci, lspci1** | <code>lspci -v "$@" &#124;</code>[**`...`**](../standard_functions#L1255-L1257) | Print info about pci devices.
+**pci, lspci1** | <code>lspci -v "$@" &#124;</code>[**`...`**](../standard_functions#L1285-L1287) | Print info about pci devices.
 
 ###  Power 
 
@@ -214,14 +216,14 @@ Commands
 :------------- |:--------:| ----------------
 **reboot** | <code>sudo reboot</code> | Restart computer.
 **poweroff** | <code>sudo poweroff</code> | Shut down computer.
-**hib** | <code>sudo pm-hiberna</code>[**`...`**](../standard_functions#L1275-L1277) | Hibernate computer.
-**sus** | <code>sudo pm-suspend</code>[**`...`**](../standard_functions#L1280-L1282) | Suspend computer.
+**hib** | <code>sudo pm-hiberna</code>[**`...`**](../standard_functions#L1305-L1307) | Hibernate computer.
+**sus** | <code>sudo pm-suspend</code>[**`...`**](../standard_functions#L1310-L1312) | Suspend computer.
 
 ###  Keyboard 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**uskeys** | <code>setxkbmap -layo</code>[**`...`**](../standard_functions#L1290-L1292) | Switch to american keyboard layout.
+**uskeys** | <code>setxkbmap -layo</code>[**`...`**](../standard_functions#L1320-L1322) | Switch to american keyboard layout.
 **keycode** | <code>xev "$@"</code> | Monitor keycodes of pressed keys.
 **norepeat** | <code>xset -r</code> | Turn off key repeat.
 **repeat** | <code>xset r</code> | Turn on key repeat.
@@ -230,140 +232,140 @@ Commands
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**blue** | <code>echo -en "\e]PC</code>[**`...`**](../standard_functions#L1316-L1318) | Change hue of color blue in linux terminal.
-**path** | <code>echo -e ${PATH/</code>[**`...`**](../standard_functions#L1321-L1323) | List directories contained in path variable.
-**libpath** | <code>echo -e  ${LD_L</code>[**`...`**](../standard_functions#L1326-L1328) | List directories contained in libpath variable.
+**blue** | <code>echo -en "\e]PC</code>[**`...`**](../standard_functions#L1346-L1348) | Change hue of color blue in linux terminal.
+**path** | <code>echo -e ${PATH/</code>[**`...`**](../standard_functions#L1351-L1353) | List directories contained in path variable.
+**libpath** | <code>echo -e  ${LD_L</code>[**`...`**](../standard_functions#L1356-L1358) | List directories contained in libpath variable.
 **bc1** | <code>gcalccmd "$@"</code> | Run terminal calculator that supports decimal numbers.
-**hd1** | <code>hd  "$@" &#124; __pr</code>[**`...`**](../standard_functions#L1338-L1340) | Print hexadecimal representation of file or stream.
-**profile** | <code>source /etc/pro</code>[**`...`**](../standard_functions#L1343-L1345) | Run profile script.
+**hd1** | <code>hd  "$@" &#124; __pr</code>[**`...`**](../standard_functions#L1368-L1370) | Print hexadecimal representation of file or stream.
+**profile** | <code>source /etc/pro</code>[**`...`**](../standard_functions#L1373-L1375) | Run profile script.
 **vimode** | <code>set -o vi</code> | Change bash line editing to vi mode.
 **emacsmode** | <code>set -o emacs</code> | Change bash line editing to emacs mode.
-**ssd** | <code>sudo fstrim -v </code>[**`...`**](../standard_functions#L1358-L1360) | Trim ssd.
+**ssd** | <code>sudo fstrim -v </code>[**`...`**](../standard_functions#L1388-L1390) | Trim ssd.
 **typingTutor** | <code>gtypist "$@"</code> | Start typing tutor.
-**extension** | <code>curl --silent f</code>[**`...`**](../standard_functions#L1368-L1373) | Describe file extension.
+**extension** | <code>curl --silent f</code>[**`...`**](../standard_functions#L1398-L1403) | Describe file extension.
 
 ###  Package Management 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**ch, canhaz** | <code>if [[ "$__stand</code>[**`...`**](../standard_functions#L1381-L1387) | Install package.
-**update** | <code>sudo apt-get up</code>[**`...`**](../standard_functions#L1390-L1392) | Update information about available packages.
-**upgrade** | <code>sudo apt-get up</code>[**`...`**](../standard_functions#L1395-L1397) | Upgrade all packages.
-**dist-upgrade** | <code>sudo apt-get di</code>[**`...`**](../standard_functions#L1402-L1404) | Upgrade all packages intelligently.
-**remove** | <code>sudo apt-get re</code>[**`...`**](../standard_functions#L1408-L1410) | Remove package and all unneeded packages.
-**purge** | <code>sudo apt-get pu</code>[**`...`**](../standard_functions#L1415-L1417) | Remove package and all unneeded packages together with configuration files.
-**autoremove** | <code>sudo apt-get au</code>[**`...`**](../standard_functions#L1421-L1423) | Remove unneeded packages.
-**installed, packages** | <code>cat /var/log/ap</code>[**`...`**](../standard_functions#L1427-L1432) | Print packages that were installed by user.
-**allInstalled, allPackages** | <code>dpkg --get-sele</code>[**`...`**](../standard_functions#L1435-L1439) | Print all installed packages.
-**depends** | <code>apt-cache show </code>[**`...`**](../standard_functions#L1442-L1448) | Print package dependencies.
+**ch, canhaz** | <code>if [[ "$__stand</code>[**`...`**](../standard_functions#L1411-L1417) | Install package.
+**update** | <code>sudo apt-get up</code>[**`...`**](../standard_functions#L1420-L1422) | Update information about available packages.
+**upgrade** | <code>sudo apt-get up</code>[**`...`**](../standard_functions#L1425-L1427) | Upgrade all packages.
+**dist-upgrade** | <code>sudo apt-get di</code>[**`...`**](../standard_functions#L1432-L1434) | Upgrade all packages intelligently.
+**remove** | <code>sudo apt-get re</code>[**`...`**](../standard_functions#L1438-L1440) | Remove package and all unneeded packages.
+**purge** | <code>sudo apt-get pu</code>[**`...`**](../standard_functions#L1445-L1447) | Remove package and all unneeded packages together with configuration files.
+**autoremove** | <code>sudo apt-get au</code>[**`...`**](../standard_functions#L1451-L1453) | Remove unneeded packages.
+**installed, packages** | <code>cat /var/log/ap</code>[**`...`**](../standard_functions#L1457-L1462) | Print packages that were installed by user.
+**allInstalled, allPackages** | <code>dpkg --get-sele</code>[**`...`**](../standard_functions#L1465-L1469) | Print all installed packages.
+**depends** | <code>apt-cache show </code>[**`...`**](../standard_functions#L1472-L1478) | Print package dependencies.
 
 ###  Package Information 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**pd, describe** | <code>apt-cache show </code>[**`...`**](../standard_functions#L1456-L1458) | Print package description.
-**ve, version** | <code># Check if pass</code>[**`...`**](../standard_functions#L1476-L1493) | Print installed and available version of package or command.
-**package** | <code>call1=$(sudo wh</code>[**`...`**](../standard_functions#L1523-L1539) | Print package of installed command together with description and location.
+**pd, describe** | <code>apt-cache show </code>[**`...`**](../standard_functions#L1486-L1488) | Print package description.
+**ve, version** | <code># Check if pass</code>[**`...`**](../standard_functions#L1506-L1523) | Print installed and available version of package or command.
+**package** | <code>call1=$(sudo wh</code>[**`...`**](../standard_functions#L1553-L1569) | Print package of installed command together with description and location.
 
 ###  Package Search 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**findPackage** | <code>apt-cache searc</code>[**`...`**](../standard_functions#L1548-L1551) | Find available packages with part of name or description.
-**ap, apropos1, findCommand** | <code>apropos "$@" \</code>[**`...`**](../standard_functions#L1556-L1559) | Find installed commands with part of name or description.
-**apt-file1** | <code>apt-file -x sea</code>[**`...`**](../standard_functions#L1562-L1565) | Find available packages that provide command.
-**wi, whatis1** | <code># Checks if it </code>[**`...`**](../standard_functions#L1604-L1628) | Describe package or command or find available packages with part of name or command.
+**findPackage** | <code>apt-cache searc</code>[**`...`**](../standard_functions#L1578-L1581) | Find available packages with part of name or description.
+**ap, apropos1, findCommand** | <code>apropos "$@" \</code>[**`...`**](../standard_functions#L1586-L1589) | Find installed commands with part of name or description.
+**apt-file1** | <code>apt-file -x sea</code>[**`...`**](../standard_functions#L1592-L1595) | Find available packages that provide command.
+**wi, whatis1** | <code># Checks if it </code>[**`...`**](../standard_functions#L1634-L1658) | Describe package or command or find available packages with part of name or command.
 
 ###  Git 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
 **status** | <code>#!/bin/bash</code> | Show git stauts.
-**commit** | <code>git commit -am </code>[**`...`**](../standard_functions#L1642-L1644) | Commit changed and deleted files with message.
-**commitm** | <code>git commit -a "</code>[**`...`**](../standard_functions#L1648-L1650) | Commit changed and deleted files and edit message in editor.
+**commit** | <code>git commit -am </code>[**`...`**](../standard_functions#L1672-L1674) | Commit changed and deleted files with message.
+**commitm** | <code>git commit -a "</code>[**`...`**](../standard_functions#L1678-L1680) | Commit changed and deleted files and edit message in editor.
 **init** | <code>git init "$@"</code> | Initialize repository.
 **push** | <code>git push "$@"</code> | Push changes to remote repository.
 **pull** | <code>git pull "$@"</code> | Pull changes from remote repository.
 **merge** | <code>git merge "$@"</code> | Merge specified branch with current one.
-**gc, checkout** | <code>git checkout "$</code>[**`...`**](../standard_functions#L1675-L1677) | Checkout branch or file.
-**gb, branch** | <code>git branch "$@"</code>[**`...`**](../standard_functions#L1680-L1682) | List branches or create new one.
-**gs** | <code>git -c color.st</code>[**`...`**](../standard_functions#L1685-L1688) | Print short repository status.
-**gl** | <code>git log --graph</code>[**`...`**](../standard_functions#L1692-L1694) | Display minimal log of commits.
-**gll** | <code>git log --graph</code>[**`...`**](../standard_functions#L1698-L1700) | Display medium log of commits.
-**glll** | <code>git log --decor</code>[**`...`**](../standard_functions#L1704-L1706) | Display log of commits.
-**gu** | <code>git remote upda</code>[**`...`**](../standard_functions#L1710-L1713) | Update information about remote repository and print status.
+**gc, checkout** | <code>git checkout "$</code>[**`...`**](../standard_functions#L1705-L1707) | Checkout branch or file.
+**gb, branch** | <code>git branch "$@"</code>[**`...`**](../standard_functions#L1710-L1712) | List branches or create new one.
+**gs** | <code>git -c color.st</code>[**`...`**](../standard_functions#L1715-L1718) | Print short repository status.
+**gl** | <code>git log --graph</code>[**`...`**](../standard_functions#L1722-L1724) | Display minimal log of commits.
+**gll** | <code>git log --graph</code>[**`...`**](../standard_functions#L1728-L1730) | Display medium log of commits.
+**glll** | <code>git log --decor</code>[**`...`**](../standard_functions#L1734-L1736) | Display log of commits.
+**gu** | <code>git remote upda</code>[**`...`**](../standard_functions#L1740-L1743) | Update information about remote repository and print status.
 **gd** | <code>git diff "$@"</code> | Display changes between commits.
 **ga** | <code>git add "$@"</code> | Add files to repository.
 **gm** | <code>git mv "$@"</code> | Move repositories files.
-**gls, lsgit** | <code>git ls-files "$</code>[**`...`**](../standard_functions#L1734-L1736) | List files that are in repository.
+**gls, lsgit** | <code>git ls-files "$</code>[**`...`**](../standard_functions#L1764-L1766) | List files that are in repository.
 
 ###  Github 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**clone** | <code>git clone git@g</code>[**`...`**](../standard_functions#L1745-L1747) | Clone github project.
-**origin** | <code>git remote add </code>[**`...`**](../standard_functions#L1751-L1755) | Set github project as remote repository.
-**cloneAll** | <code>if [[ -z "$1" ]</code>[**`...`**](../standard_functions#L1758-L1770) | Clone all users github projects.
+**clone** | <code>git clone git@g</code>[**`...`**](../standard_functions#L1775-L1777) | Clone github project.
+**origin** | <code>git remote add </code>[**`...`**](../standard_functions#L1781-L1785) | Set github project as remote repository.
+**cloneAll** | <code>if [[ -z "$1" ]</code>[**`...`**](../standard_functions#L1788-L1800) | Clone all users github projects.
 
 ###  Network 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**ip1** | <code>/sbin/ifconfig </code>[**`...`**](../standard_functions#L1778-L1785) | Print internal ip.
-**ip2** | <code>lynx --dump htt</code>[**`...`**](../standard_functions#L1788-L1790) | Print external ip.
-**gateway** | <code>route -n \</code>[**`...`**](../standard_functions#L1793-L1798) | Print gateways ip.
-**mac** | <code>ifconfig &#124; grep</code>[**`...`**](../standard_functions#L1801-L1803) | Print mac addresses of network devices.
-**pa, pingAll** | <code>ping -c 1 -q $(</code>[**`...`**](../standard_functions#L1806-L1810) | Ping gateway and google.
-**nmap1** | <code>if [[ $# -eq 0 </code>[**`...`**](../standard_functions#L1814-L1830) | Scan local network.
-**ne, network** | <code>localIp=$(ip1)</code>[**`...`**](../standard_functions#L1858-L1889) | Print ssh port status of local devices and ping google.
+**ip1** | <code>/sbin/ifconfig </code>[**`...`**](../standard_functions#L1808-L1815) | Print internal ip.
+**ip2** | <code>lynx --dump htt</code>[**`...`**](../standard_functions#L1818-L1820) | Print external ip.
+**gateway** | <code>route -n \</code>[**`...`**](../standard_functions#L1823-L1828) | Print gateways ip.
+**mac** | <code>ifconfig &#124; grep</code>[**`...`**](../standard_functions#L1831-L1833) | Print mac addresses of network devices.
+**pa, pingAll** | <code>ping -c 1 -q $(</code>[**`...`**](../standard_functions#L1836-L1840) | Ping gateway and google.
+**nmap1** | <code>if [[ $# -eq 0 </code>[**`...`**](../standard_functions#L1844-L1860) | Scan local network.
+**ne, network** | <code>localIp=$(ip1)</code>[**`...`**](../standard_functions#L1888-L1919) | Print ssh port status of local devices and ping google.
 
 ###  Wireless 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**woff** | <code>sudo rfkill blo</code>[**`...`**](../standard_functions#L1897-L1902) | Block wireless device.
-**won** | <code>sudo rfkill unb</code>[**`...`**](../standard_functions#L1905-L1910) | Unblock wireless device.
-**wr** | <code>woff</code>[**`...`**](../standard_functions#L1913-L1916) | Reset wireless device.
-**up** | <code>sudo ifconfig w</code>[**`...`**](../standard_functions#L1919-L1921) | Activate wireless interface.
-**down** | <code>sudo ifconfig w</code>[**`...`**](../standard_functions#L1924-L1926) | Deactivate wireless interface.
-**wlan** | <code>sudo iwlist wla</code>[**`...`**](../standard_functions#L1929-L1939) | Print wireless networks in range.
+**woff** | <code>sudo rfkill blo</code>[**`...`**](../standard_functions#L1927-L1932) | Block wireless device.
+**won** | <code>sudo rfkill unb</code>[**`...`**](../standard_functions#L1935-L1940) | Unblock wireless device.
+**wr** | <code>woff</code>[**`...`**](../standard_functions#L1943-L1946) | Reset wireless device.
+**up** | <code>sudo ifconfig w</code>[**`...`**](../standard_functions#L1949-L1951) | Activate wireless interface.
+**down** | <code>sudo ifconfig w</code>[**`...`**](../standard_functions#L1954-L1956) | Deactivate wireless interface.
+**wlan** | <code>sudo iwlist wla</code>[**`...`**](../standard_functions#L1959-L1969) | Print wireless networks in range.
 
 ###  Internet 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**i, www, internet** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1947-L1949) | Start default browser in background.
-**fire** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1952-L1954) | Start firefox in background.
-**chrome** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1959-L1961) | Start chrome in background.
-**lynx1** | <code>lynx -accept_al</code>[**`...`**](../standard_functions#L1967-L1969) | Start terminal web browser.
+**i, www, internet** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1977-L1979) | Start default browser in background.
+**fire** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1982-L1984) | Start firefox in background.
+**chrome** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1989-L1991) | Start chrome in background.
+**lynx1** | <code>lynx -accept_al</code>[**`...`**](../standard_functions#L1997-L1999) | Start terminal web browser.
 
 ###  Audio 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
 **mixer** | <code>alsamixer "$@"</code> | Start terminal volume control.
-**a** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L1987-L1989) | Increase volume by six decibels.
-**z** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L1992-L1994) | Decrease volume by six decibels.
-**aa** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L1997-L1999) | Increase volume by two decibels.
-**zz** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2002-L2004) | Decrease volume by two decibels.
+**a** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2017-L2019) | Increase volume by six decibels.
+**z** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2022-L2024) | Decrease volume by six decibels.
+**aa** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2027-L2029) | Increase volume by two decibels.
+**zz** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2032-L2034) | Decrease volume by two decibels.
 
 ###  Framework 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**fu** | <code>"${EDITOR:-nano</code>[**`...`**](../standard_functions#L2012-L2014) | Edit standard functions.
-**rc, al** | <code>"${EDITOR:-nano</code>[**`...`**](../standard_functions#L2017-L2019) | Edit standard rc.
+**fu** | <code>"${EDITOR:-nano</code>[**`...`**](../standard_functions#L2042-L2044) | Edit standard functions.
+**rc, al** | <code>"${EDITOR:-nano</code>[**`...`**](../standard_functions#L2047-L2049) | Edit standard rc.
 
 ###  Ssh Alias 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**sshkey** | <code>ssh-keygen -t r</code>[**`...`**](../standard_functions#L2026-L2028) | Generate ssh key pair.
+**sshkey** | <code>ssh-keygen -t r</code>[**`...`**](../standard_functions#L2056-L2058) | Generate ssh key pair.
 
-###  Kubectl 
+###   Kubectl  
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**kv** | <code>#!/bin/bash</code> | Print Kubectl Detail Version
-**kvs** | <code>#!/bin/bash</code> | Print Kubectl Short Version
+**kv** | <code>#!/bin/bash</code> | Print kubectl detail version.
+**kvs** | <code>#!/bin/bash</code> | Print kubectl short version.
 

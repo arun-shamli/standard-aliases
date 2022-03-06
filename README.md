@@ -7,7 +7,7 @@ They provide **commands that should be in Linux** by default, or just **abbrevia
 
 Collection was made for **Debian** based Linux (**Ubuntu**, **Mint**, ...) with **Gnome** desktop environment, but most commands will work on any system that has _Bash_ shell and _GNU Coreutils_ installed. For **macOS** see [instructions](#how-to-run-on-macos).
 
-There are currently **222 commands**.
+There are currently **224 commands**.
 
 How to…
 -------
@@ -31,7 +31,7 @@ Below is a list of most useful commands. If you want to check out the full list 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**** | <code>if [[ $# -eq 0 </code>[**`...`**](standard_functions#L454-L460) | Print working directory or path to file.
+**** | <code>if [[ $# -eq 0 </code>[**`...`**](standard_functions#L484-L490) | Print working directory or path to file.
 **l** | <code>___displayOutpu</code>[**`...`**](standard_functions#L194-L197) | List or display directory contents in pager using short listing format.
 **la** | <code>__listOrDisplay</code>[**`...`**](standard_functions#L209-L212) | List or display all directory contents in pager using short listing format.
 **ll** | <code>___displayOutpu</code>[**`...`**](standard_functions#L204-L207) | List or display directory contents in pager using long listing format.
@@ -54,21 +54,21 @@ Below is a list of most useful commands. If you want to check out the full list 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**extract** | <code>if [ -z "$1" ];</code>[**`...`**](standard_functions#L1152-L1185) | Extract archive of any type.
-**o, openFile** | <code>__runCommandInB</code>[**`...`**](standard_functions#L600-L602) | Open file with default app.
-**rb, runInBackground** | <code>nohup "$@" &>/d</code>[**`...`**](standard_functions#L489-L491) | Run command in background.
-**me, makeExecutable** | <code>if [[ ! -f "$1"</code>[**`...`**](standard_functions#L650-L698) | Make file executable or create new bash or python script.
-**lo, locate1** | <code>locate  "$1" \</code>[**`...`**](standard_functions#L1128-L1132) | Locate files on filesystem containing pattern in their names.
-**grr** | <code>__printLinesCon</code>[**`...`**](standard_functions#L1117-L1123) | Print or display with pager numbered lines containing pattern in working and subdirectories.
+**extract** | <code>if [ -z "$1" ];</code>[**`...`**](standard_functions#L1182-L1215) | Extract archive of any type.
+**o, openFile** | <code>__runCommandInB</code>[**`...`**](standard_functions#L630-L632) | Open file with default app.
+**rb, runInBackground** | <code>nohup "$@" &>/d</code>[**`...`**](standard_functions#L519-L521) | Run command in background.
+**me, makeExecutable** | <code>if [[ ! -f "$1"</code>[**`...`**](standard_functions#L680-L728) | Make file executable or create new bash or python script.
+**lo, locate1** | <code>locate  "$1" \</code>[**`...`**](standard_functions#L1158-L1162) | Locate files on filesystem containing pattern in their names.
+**grr** | <code>__printLinesCon</code>[**`...`**](standard_functions#L1147-L1153) | Print or display with pager numbered lines containing pattern in working and subdirectories.
 
 ####  Git 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**gs** | <code>git -c color.st</code>[**`...`**](standard_functions#L1685-L1688) | Print short repository status.
+**gs** | <code>git -c color.st</code>[**`...`**](standard_functions#L1715-L1718) | Print short repository status.
 **gd** | <code>git diff "$@"</code> | Display changes between commits.
-**gl** | <code>git log --graph</code>[**`...`**](standard_functions#L1692-L1694) | Display minimal log of commits.
-**commit** | <code>git commit -am </code>[**`...`**](standard_functions#L1642-L1644) | Commit changed and deleted files with message.
+**gl** | <code>git log --graph</code>[**`...`**](standard_functions#L1722-L1724) | Display minimal log of commits.
+**commit** | <code>git commit -am </code>[**`...`**](standard_functions#L1672-L1674) | Commit changed and deleted files with message.
 **push** | <code>git push "$@"</code> | Push changes to remote repository.
 **pull** | <code>git pull "$@"</code> | Pull changes from remote repository.
 
@@ -76,19 +76,19 @@ Below is a list of most useful commands. If you want to check out the full list 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**pa, pingAll** | <code>ping -c 1 -q $(</code>[**`...`**](standard_functions#L1806-L1810) | Ping gateway and google.
-**ip1** | <code>/sbin/ifconfig </code>[**`...`**](standard_functions#L1778-L1785) | Print internal ip.
-**ip2** | <code>lynx --dump htt</code>[**`...`**](standard_functions#L1788-L1790) | Print external ip.
-**gateway** | <code>route -n \</code>[**`...`**](standard_functions#L1793-L1798) | Print gateways ip.
+**pa, pingAll** | <code>ping -c 1 -q $(</code>[**`...`**](standard_functions#L1836-L1840) | Ping gateway and google.
+**ip1** | <code>/sbin/ifconfig </code>[**`...`**](standard_functions#L1808-L1815) | Print internal ip.
+**ip2** | <code>lynx --dump htt</code>[**`...`**](standard_functions#L1818-L1820) | Print external ip.
+**gateway** | <code>route -n \</code>[**`...`**](standard_functions#L1823-L1828) | Print gateways ip.
 
 ####  Packages 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**update** | <code>sudo apt-get up</code>[**`...`**](standard_functions#L1390-L1392) | Update information about available packages.
-**ch, canhaz** | <code>if [[ "$__stand</code>[**`...`**](standard_functions#L1381-L1387) | Install package.
-**ve, version** | <code># Check if pass</code>[**`...`**](standard_functions#L1476-L1493) | Print installed and available version of package or command.
-**wi, whatis1** | <code># Checks if it </code>[**`...`**](standard_functions#L1604-L1628) | Describe package or command or find available packages with part of name or command.
+**update** | <code>sudo apt-get up</code>[**`...`**](standard_functions#L1420-L1422) | Update information about available packages.
+**ch, canhaz** | <code>if [[ "$__stand</code>[**`...`**](standard_functions#L1411-L1417) | Install package.
+**ve, version** | <code># Check if pass</code>[**`...`**](standard_functions#L1506-L1523) | Print installed and available version of package or command.
+**wi, whatis1** | <code># Checks if it </code>[**`...`**](standard_functions#L1634-L1658) | Describe package or command or find available packages with part of name or command.
 
 How To Rename Commands
 ----------------------
@@ -149,6 +149,9 @@ brew install findutils --with-default-names
 brew install tree
 ...
 ```
+
+
+
 
 
 
