@@ -204,7 +204,7 @@ tma, mua : Run terminal multiplexer and attach to last session.
 tml, mul : List terminal multiplexers sessions.
 
 # SYSTEM INFORMATION #
-
+ds : Print Space used by each directory
 df1 : Print available disk space in simplified form.
 du1 : Print disk space occupied by file or folder.
 fr, free1 : Print all and free memory space in megabytes.

@@ -1209,7 +1209,10 @@ __listTerminalMultiplexersSessions() {
 ######################
 # SYSTEM INFORMATION #
 ######################
-
+# Reports disk space used by each directory in current directory. 
+__printSpaceUsedByEachDirectory(){
+  du  | grep -v "\/.*\/.*"
+}
 # Reports disk space of main partitions in human readable form.
 __printAvailableDiskSpaceInSimplifiedForm() {
   df -h | grep "sd\|Size" | cat

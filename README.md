@@ -7,7 +7,7 @@ They provide **commands that should be in Linux** by default, or just **abbrevia
 
 Collection was made for **Debian** based Linux (**Ubuntu**, **Mint**, ...) with **Gnome** desktop environment, but most commands will work on any system that has _Bash_ shell and _GNU Coreutils_ installed. For **macOS** see [instructions](#how-to-run-on-macos).
 
-There are currently **221 commands**.
+There are currently **222 commands**.
 
 How to…
 -------
@@ -65,10 +65,10 @@ Below is a list of most useful commands. If you want to check out the full list 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**gs** | <code>git -c color.st</code>[**`...`**](standard_functions#L1682-L1685) | Print short repository status.
+**gs** | <code>git -c color.st</code>[**`...`**](standard_functions#L1685-L1688) | Print short repository status.
 **gd** | <code>git diff "$@"</code> | Display changes between commits.
-**gl** | <code>git log --graph</code>[**`...`**](standard_functions#L1689-L1691) | Display minimal log of commits.
-**commit** | <code>git commit -am </code>[**`...`**](standard_functions#L1639-L1641) | Commit changed and deleted files with message.
+**gl** | <code>git log --graph</code>[**`...`**](standard_functions#L1692-L1694) | Display minimal log of commits.
+**commit** | <code>git commit -am </code>[**`...`**](standard_functions#L1642-L1644) | Commit changed and deleted files with message.
 **push** | <code>git push "$@"</code> | Push changes to remote repository.
 **pull** | <code>git pull "$@"</code> | Pull changes from remote repository.
 
@@ -76,19 +76,19 @@ Below is a list of most useful commands. If you want to check out the full list 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**pa, pingAll** | <code>ping -c 1 -q $(</code>[**`...`**](standard_functions#L1803-L1807) | Ping gateway and google.
-**ip1** | <code>/sbin/ifconfig </code>[**`...`**](standard_functions#L1775-L1782) | Print internal ip.
-**ip2** | <code>lynx --dump htt</code>[**`...`**](standard_functions#L1785-L1787) | Print external ip.
-**gateway** | <code>route -n \</code>[**`...`**](standard_functions#L1790-L1795) | Print gateways ip.
+**pa, pingAll** | <code>ping -c 1 -q $(</code>[**`...`**](standard_functions#L1806-L1810) | Ping gateway and google.
+**ip1** | <code>/sbin/ifconfig </code>[**`...`**](standard_functions#L1778-L1785) | Print internal ip.
+**ip2** | <code>lynx --dump htt</code>[**`...`**](standard_functions#L1788-L1790) | Print external ip.
+**gateway** | <code>route -n \</code>[**`...`**](standard_functions#L1793-L1798) | Print gateways ip.
 
 ####  Packages 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**update** | <code>sudo apt-get up</code>[**`...`**](standard_functions#L1387-L1389) | Update information about available packages.
-**ch, canhaz** | <code>if [[ "$__stand</code>[**`...`**](standard_functions#L1378-L1384) | Install package.
-**ve, version** | <code># Check if pass</code>[**`...`**](standard_functions#L1473-L1490) | Print installed and available version of package or command.
-**wi, whatis1** | <code># Checks if it </code>[**`...`**](standard_functions#L1601-L1625) | Describe package or command or find available packages with part of name or command.
+**update** | <code>sudo apt-get up</code>[**`...`**](standard_functions#L1390-L1392) | Update information about available packages.
+**ch, canhaz** | <code>if [[ "$__stand</code>[**`...`**](standard_functions#L1381-L1387) | Install package.
+**ve, version** | <code># Check if pass</code>[**`...`**](standard_functions#L1476-L1493) | Print installed and available version of package or command.
+**wi, whatis1** | <code># Checks if it </code>[**`...`**](standard_functions#L1604-L1628) | Describe package or command or find available packages with part of name or command.
 
 How To Rename Commands
 ----------------------
@@ -149,6 +149,7 @@ brew install findutils --with-default-names
 brew install tree
 ...
 ```
+
 
 
 
