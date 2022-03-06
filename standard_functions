@@ -1001,6 +1001,11 @@ complete -F _command __traceSystemCalls
 ########
 # TEXT #
 ########
+# print the contents of a file using batcat
+
+__printContentsOfFile(){
+  batcat "$@"
+}
 
 # Runs head (prints first 10 lines of file or piped stream).
 __printFirstTenLines() {
@@ -1624,6 +1629,11 @@ __describePackageOrCommandOrFindAvailablePackagesWithPartOfNameOrCommand() {
 # GIT #
 #######
 
+# show the git status in the current directroy
+__showGitStauts(){
+  git status .
+}
+
 # Commits changed and deleted files. Commit message must be
 # entered as parameter.
 __commitChangedAndDeletedFilesWithMessage() {
@@ -2004,3 +2014,28 @@ __editStandardFunctions() {
 __editStandardRc() {
   "${EDITOR:-nano}" ~/.standardrc
 }
+
+
+#############
+# SSH ALIAS #
+#############
+# generate ssh key pair
+__generateSshKeyPair() {
+  ssh-keygen -t rsa
+}
+
+#############
+#  KUBECTL  #
+#############
+
+# print kubectl client version in yaml format
+__printKubectlDetailVersion(){
+  kubectl version --client -o=yaml
+}
+
+# print kubectl short client version
+
+__printKubectlShortVersion(){
+  kubectl version --client --short
+}
+

@@ -66,9 +66,9 @@ cdiso : Mount iso and cd into.
 d : List directories only.
 f : List files only.
 h : List hidden files only.
-# cp : Copy files safely.
-# mv  : Move files safely.
-# rm : Delete files safely.
+ : Copy files safely.
+ : Move files safely.
+ : Delete files safely.
 cpdir : Copy directories safely.
 mvdir : Move directories safely.
 rmdir : Delete directories safely.
@@ -169,6 +169,7 @@ st, strace1, trace : Trace system calls.
 
 # TEXT #
 
+bat : Print contents of file.
 he : Print first ten lines.
 he1, firstLine : Print first line.
 ta : Print last ten lines.
@@ -268,6 +269,7 @@ wi, whatis1 : Describe package or command or find available packages with part o
 
 # GIT #
 
+status : Show git stauts.
 commit : Commit changed and deleted files with message.
 commitm : Commit changed and deleted files and edit message in editor.
 init : Initialize repository.
@@ -330,6 +332,14 @@ zz : Decrease volume by two decibels.
 
 fu : Edit standard functions.
 rc, al : Edit standard rc.
+
+# SSH ALIAS #
+
+sshkey : Generate ssh key pair.
+
+# Kubectl #
+kv : Print Kubectl Detail Version
+kvs : Print Kubectl Short Version
 
 
 #######
