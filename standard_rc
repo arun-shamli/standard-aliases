@@ -59,16 +59,16 @@ tt : Clear screen andprint directory structure.
 ..... : Go up four directories.
 ...... : Go up five directories.
 ....... : Go up six directories.
-cdiso : Mount iso and cd into.
+##cdiso : Mount iso and cd into.
 
 # FILES #
 
 d : List directories only.
 f : List files only.
 h : List hidden files only.
- : Copy files safely.
- : Move files safely.
- : Delete files safely.
+##cp : Copy files safely.
+##mv : Move files safely.
+##rm : Delete files safely.
 cpdir : Copy directories safely.
 mvdir : Move directories safely.
 rmdir : Delete directories safely.
@@ -80,7 +80,7 @@ fifi : Find in files ignore case.
 
 # PWD #
 
- : Print working directory or path to file.
+##p : Print working directory or path to file.
 
 # ECHO #
 
@@ -130,7 +130,7 @@ sub : Edit file with sublime text.
 
 root : Switch to root.
 s : Execute command as super user.
- : Execute last command as super user.
+##f, please : Execute last command as super user.
 sudoCp : Copy files safely as super user.
 smv : Move files safely as super user.
 srm : Delete files safely as super user.

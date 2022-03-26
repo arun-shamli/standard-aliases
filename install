@@ -61,6 +61,7 @@ main() {
   #    .profile or .bash_aliases).
   (cd scripts
   temp=$(mktemp /tmp/XXXXXXXX)
+  echo "Temp file name is : ${temp}"
   ./remove-conflicts-from-rc.py > "$temp"
   copyFileSafely ~/.standardrc "$temp"
   )

@@ -16,7 +16,7 @@ import const
 
 projectsRcContent = util.getFileContents(const.PROJECTS_RC_FILENAME)
 usersHeader = util.getFileContents(const.USERS_RC_HEADER)
-
+print(usersHeader)
 def main():
   conflicts = set(os.popen('./get-conflicting-names').read().split('\n'))
   header = True
