@@ -45,7 +45,7 @@ Commands
 **.....** | <code>___goUpNumberOf</code>[**`...`**](../standard_functions#L349-L351) | Go up four directories.
 **......** | <code>___goUpNumberOf</code>[**`...`**](../standard_functions#L353-L355) | Go up five directories.
 **.......** | <code>___goUpNumberOf</code>[**`...`**](../standard_functions#L357-L359) | Go up six directories.
-**cdiso** | <code>sudo mkdir /med</code>[**`...`**](../standard_functions#L362-L366) | Mount iso and cd into.
+**##cdiso** | <code>sudo mkdir /med</code>[**`...`**](../standard_functions#L362-L366) | Mount iso and cd into.
 
 ###  Files 
 
@@ -54,6 +54,9 @@ Commands
 **d** | <code>ls -l &#124; grep "^</code>[**`...`**](../standard_functions#L374-L376) | List directories only.
 **f** | <code>ls -al &#124;grep "^</code>[**`...`**](../standard_functions#L379-L381) | List files only.
 **h** | <code>__listFilesOnly</code>[**`...`**](../standard_functions#L384-L386) | List hidden files only.
+**##cp** | <code>cp --interactiv</code>[**`...`**](../standard_functions#L390-L392) | Copy files safely.
+**##mv** | <code>mv --interactiv</code>[**`...`**](../standard_functions#L396-L398) | Move files safely.
+**##rm** | <code>rm --interactiv</code>[**`...`**](../standard_functions#L403-L405) | Delete files safely.
 **cpdir** | <code>cp --interactiv</code>[**`...`**](../standard_functions#L409-L411) | Copy directories safely.
 **mvdir** | <code>mv --interactiv</code>[**`...`**](../standard_functions#L415-L417) | Move directories safely.
 **rmdir** | <code>rm --interactiv</code>[**`...`**](../standard_functions#L422-L424) | Delete directories safely.
@@ -67,6 +70,7 @@ Commands
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
+**##p** | <code>if [[ $# -eq 0 </code>[**`...`**](../standard_functions#L484-L490) | Print working directory or path to file.
 
 ###  Echo 
 
@@ -128,6 +132,7 @@ Commands
 :------------- |:--------:| ----------------
 **root** | <code>#!/bin/bash</code> | Switch to root.
 **s** | <code>sudo "$@"</code> | Execute command as super user.
+**##f, please** | <code>sudo $(history </code>[**`...`**](../standard_functions#L823-L825) | Execute last command as super user.
 **sudoCp** | <code>sudo cp --inter</code>[**`...`**](../standard_functions#L829-L831) | Copy files safely as super user.
 **smv** | <code>sudo mv --inter</code>[**`...`**](../standard_functions#L835-L837) | Move files safely as super user.
 **srm** | <code>sudo rm --inter</code>[**`...`**](../standard_functions#L842-L844) | Delete files safely as super user.
@@ -360,7 +365,7 @@ Commands
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**sshkey** | <code>ssh-keygen -t r</code>[**`...`**](../standard_functions#L2056-L2058) | Generate ssh key pair.
+**sshkey** | <code>#ssh-keygen -t </code>[**`...`**](../standard_functions#L2056-L2059) | Generate ssh key pair.
 
 ###   Kubectl  
 

@@ -1,7 +1,7 @@
 
 ![Standard Aliases](doc/sa_logo.png)
 
-### Make Linux more user friendly with this collection of **Bash functions**!
+### Make Linux more user friendly with this collection of ***Bash functions***!
 
 They provide **commands that should be in Linux** by default, or just **abbreviations of commands** that are provided, but are so commonly used that they deserve a shorter name and/or a set of configurable **“sensible” options**. When abbreviated command is executed, these predefined options are combined with the actual ones. Also most of the commands send their **output to a pager** if it doesn't fit the screen.
 
@@ -31,7 +31,7 @@ Below is a list of most useful commands. If you want to check out the full list 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**** | <code>if [[ $# -eq 0 </code>[**`...`**](standard_functions#L484-L490) | Print working directory or path to file.
+**##p** | <code>if [[ $# -eq 0 </code>[**`...`**](standard_functions#L484-L490) | Print working directory or path to file.
 **l** | <code>___displayOutpu</code>[**`...`**](standard_functions#L194-L197) | List or display directory contents in pager using short listing format.
 **la** | <code>__listOrDisplay</code>[**`...`**](standard_functions#L209-L212) | List or display all directory contents in pager using short listing format.
 **ll** | <code>___displayOutpu</code>[**`...`**](standard_functions#L204-L207) | List or display directory contents in pager using long listing format.
@@ -149,6 +149,7 @@ brew install findutils --with-default-names
 brew install tree
 ...
 ```
+
 
 
 
