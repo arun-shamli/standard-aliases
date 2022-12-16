@@ -1416,6 +1416,10 @@ __installPackage() {
   fi
 }
 
+__updateAllCondaPackages()
+{
+  conda update --all
+}
 # Updates package information.
 __updateInformationAboutAvailablePackages() {
   sudo apt-get update  && sudo apt-get upgrade -y

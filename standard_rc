@@ -247,6 +247,7 @@ extension : Describe file extension.
 # PACKAGE MANAGEMENT #
 
 ch, canhaz : Install package.
+pyupdate : Update all conda packages
 update : Update information about available packages.
 upgrade : Upgrade all packages.
 dist-upgrade : Upgrade all packages intelligently.

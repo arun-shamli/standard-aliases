@@ -254,118 +254,119 @@ Commands
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
 **ch, canhaz** | <code>if [[ "$__stand</code>[**`...`**](../standard_functions#L1411-L1417) | Install package.
-**update** | <code>sudo apt-get up</code>[**`...`**](../standard_functions#L1420-L1422) | Update information about available packages.
-**upgrade** | <code>sudo apt-get up</code>[**`...`**](../standard_functions#L1425-L1427) | Upgrade all packages.
-**dist-upgrade** | <code>sudo apt-get di</code>[**`...`**](../standard_functions#L1432-L1434) | Upgrade all packages intelligently.
-**remove** | <code>sudo apt-get re</code>[**`...`**](../standard_functions#L1438-L1440) | Remove package and all unneeded packages.
-**purge** | <code>sudo apt-get pu</code>[**`...`**](../standard_functions#L1445-L1447) | Remove package and all unneeded packages together with configuration files.
-**autoremove** | <code>sudo apt-get au</code>[**`...`**](../standard_functions#L1451-L1453) | Remove unneeded packages.
-**installed, packages** | <code>cat /var/log/ap</code>[**`...`**](../standard_functions#L1457-L1462) | Print packages that were installed by user.
-**allInstalled, allPackages** | <code>dpkg --get-sele</code>[**`...`**](../standard_functions#L1465-L1469) | Print all installed packages.
-**depends** | <code>apt-cache show </code>[**`...`**](../standard_functions#L1472-L1478) | Print package dependencies.
+**pyupdate** | <code>#!/bin/bash</code> | Update all conda packages
+**update** | <code>sudo apt-get up</code>[**`...`**](../standard_functions#L1424-L1426) | Update information about available packages.
+**upgrade** | <code>sudo apt-get up</code>[**`...`**](../standard_functions#L1429-L1431) | Upgrade all packages.
+**dist-upgrade** | <code>sudo apt-get di</code>[**`...`**](../standard_functions#L1436-L1438) | Upgrade all packages intelligently.
+**remove** | <code>sudo apt-get re</code>[**`...`**](../standard_functions#L1442-L1444) | Remove package and all unneeded packages.
+**purge** | <code>sudo apt-get pu</code>[**`...`**](../standard_functions#L1449-L1451) | Remove package and all unneeded packages together with configuration files.
+**autoremove** | <code>sudo apt-get au</code>[**`...`**](../standard_functions#L1455-L1457) | Remove unneeded packages.
+**installed, packages** | <code>cat /var/log/ap</code>[**`...`**](../standard_functions#L1461-L1466) | Print packages that were installed by user.
+**allInstalled, allPackages** | <code>dpkg --get-sele</code>[**`...`**](../standard_functions#L1469-L1473) | Print all installed packages.
+**depends** | <code>apt-cache show </code>[**`...`**](../standard_functions#L1476-L1482) | Print package dependencies.
 
 ###  Package Information 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**pd, describe** | <code>apt-cache show </code>[**`...`**](../standard_functions#L1486-L1488) | Print package description.
-**ve, version** | <code># Check if pass</code>[**`...`**](../standard_functions#L1506-L1523) | Print installed and available version of package or command.
-**package** | <code>call1=$(sudo wh</code>[**`...`**](../standard_functions#L1553-L1569) | Print package of installed command together with description and location.
+**pd, describe** | <code>apt-cache show </code>[**`...`**](../standard_functions#L1490-L1492) | Print package description.
+**ve, version** | <code># Check if pass</code>[**`...`**](../standard_functions#L1510-L1527) | Print installed and available version of package or command.
+**package** | <code>call1=$(sudo wh</code>[**`...`**](../standard_functions#L1557-L1573) | Print package of installed command together with description and location.
 
 ###  Package Search 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**findPackage** | <code>apt-cache searc</code>[**`...`**](../standard_functions#L1578-L1581) | Find available packages with part of name or description.
-**ap, apropos1, findCommand** | <code>apropos "$@" \</code>[**`...`**](../standard_functions#L1586-L1589) | Find installed commands with part of name or description.
-**apt-file1** | <code>apt-file -x sea</code>[**`...`**](../standard_functions#L1592-L1595) | Find available packages that provide command.
-**wi, whatis1** | <code># Checks if it </code>[**`...`**](../standard_functions#L1634-L1658) | Describe package or command or find available packages with part of name or command.
+**findPackage** | <code>apt-cache searc</code>[**`...`**](../standard_functions#L1582-L1585) | Find available packages with part of name or description.
+**ap, apropos1, findCommand** | <code>apropos "$@" \</code>[**`...`**](../standard_functions#L1590-L1593) | Find installed commands with part of name or description.
+**apt-file1** | <code>apt-file -x sea</code>[**`...`**](../standard_functions#L1596-L1599) | Find available packages that provide command.
+**wi, whatis1** | <code># Checks if it </code>[**`...`**](../standard_functions#L1638-L1662) | Describe package or command or find available packages with part of name or command.
 
 ###  Git 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
 **status** | <code>#!/bin/bash</code> | Show git stauts.
-**commit** | <code>git commit -am </code>[**`...`**](../standard_functions#L1672-L1674) | Commit changed and deleted files with message.
-**commitm** | <code>git commit -a "</code>[**`...`**](../standard_functions#L1678-L1680) | Commit changed and deleted files and edit message in editor.
+**commit** | <code>git commit -am </code>[**`...`**](../standard_functions#L1676-L1678) | Commit changed and deleted files with message.
+**commitm** | <code>git commit -a "</code>[**`...`**](../standard_functions#L1682-L1684) | Commit changed and deleted files and edit message in editor.
 **init** | <code>git init "$@"</code> | Initialize repository.
 **push** | <code>git push "$@"</code> | Push changes to remote repository.
 **pull** | <code>git pull "$@"</code> | Pull changes from remote repository.
 **merge** | <code>git merge "$@"</code> | Merge specified branch with current one.
-**gc, checkout** | <code>git checkout "$</code>[**`...`**](../standard_functions#L1705-L1707) | Checkout branch or file.
-**gb, branch** | <code>git branch "$@"</code>[**`...`**](../standard_functions#L1710-L1712) | List branches or create new one.
-**gs** | <code>git -c color.st</code>[**`...`**](../standard_functions#L1715-L1718) | Print short repository status.
-**gl** | <code>git log --graph</code>[**`...`**](../standard_functions#L1722-L1724) | Display minimal log of commits.
-**gll** | <code>git log --graph</code>[**`...`**](../standard_functions#L1728-L1730) | Display medium log of commits.
-**glll** | <code>git log --decor</code>[**`...`**](../standard_functions#L1734-L1736) | Display log of commits.
-**gu** | <code>git remote upda</code>[**`...`**](../standard_functions#L1740-L1743) | Update information about remote repository and print status.
+**gc, checkout** | <code>git checkout "$</code>[**`...`**](../standard_functions#L1709-L1711) | Checkout branch or file.
+**gb, branch** | <code>git branch "$@"</code>[**`...`**](../standard_functions#L1714-L1716) | List branches or create new one.
+**gs** | <code>git -c color.st</code>[**`...`**](../standard_functions#L1719-L1722) | Print short repository status.
+**gl** | <code>git log --graph</code>[**`...`**](../standard_functions#L1726-L1728) | Display minimal log of commits.
+**gll** | <code>git log --graph</code>[**`...`**](../standard_functions#L1732-L1734) | Display medium log of commits.
+**glll** | <code>git log --decor</code>[**`...`**](../standard_functions#L1738-L1740) | Display log of commits.
+**gu** | <code>git remote upda</code>[**`...`**](../standard_functions#L1744-L1747) | Update information about remote repository and print status.
 **gd** | <code>git diff "$@"</code> | Display changes between commits.
 **ga** | <code>git add "$@"</code> | Add files to repository.
 **gm** | <code>git mv "$@"</code> | Move repositories files.
-**gls, lsgit** | <code>git ls-files "$</code>[**`...`**](../standard_functions#L1764-L1766) | List files that are in repository.
+**gls, lsgit** | <code>git ls-files "$</code>[**`...`**](../standard_functions#L1768-L1770) | List files that are in repository.
 
 ###  Github 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**clone** | <code>git clone git@g</code>[**`...`**](../standard_functions#L1775-L1777) | Clone github project.
-**origin** | <code>git remote add </code>[**`...`**](../standard_functions#L1781-L1785) | Set github project as remote repository.
-**cloneAll** | <code>if [[ -z "$1" ]</code>[**`...`**](../standard_functions#L1788-L1800) | Clone all users github projects.
+**clone** | <code>git clone git@g</code>[**`...`**](../standard_functions#L1779-L1781) | Clone github project.
+**origin** | <code>git remote add </code>[**`...`**](../standard_functions#L1785-L1789) | Set github project as remote repository.
+**cloneAll** | <code>if [[ -z "$1" ]</code>[**`...`**](../standard_functions#L1792-L1804) | Clone all users github projects.
 
 ###  Network 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**ip1** | <code>/sbin/ifconfig </code>[**`...`**](../standard_functions#L1808-L1815) | Print internal ip.
-**ip2** | <code>lynx --dump htt</code>[**`...`**](../standard_functions#L1818-L1820) | Print external ip.
-**gateway** | <code>route -n \</code>[**`...`**](../standard_functions#L1823-L1828) | Print gateways ip.
-**mac** | <code>ifconfig &#124; grep</code>[**`...`**](../standard_functions#L1831-L1833) | Print mac addresses of network devices.
-**pa, pingAll** | <code>ping -c 1 -q $(</code>[**`...`**](../standard_functions#L1836-L1840) | Ping gateway and google.
-**nmap1** | <code>if [[ $# -eq 0 </code>[**`...`**](../standard_functions#L1844-L1860) | Scan local network.
-**ne, network** | <code>localIp=$(ip1)</code>[**`...`**](../standard_functions#L1888-L1919) | Print ssh port status of local devices and ping google.
+**ip1** | <code>/sbin/ifconfig </code>[**`...`**](../standard_functions#L1812-L1819) | Print internal ip.
+**ip2** | <code>lynx --dump htt</code>[**`...`**](../standard_functions#L1822-L1824) | Print external ip.
+**gateway** | <code>route -n \</code>[**`...`**](../standard_functions#L1827-L1832) | Print gateways ip.
+**mac** | <code>ifconfig &#124; grep</code>[**`...`**](../standard_functions#L1835-L1837) | Print mac addresses of network devices.
+**pa, pingAll** | <code>ping -c 1 -q $(</code>[**`...`**](../standard_functions#L1840-L1844) | Ping gateway and google.
+**nmap1** | <code>if [[ $# -eq 0 </code>[**`...`**](../standard_functions#L1848-L1864) | Scan local network.
+**ne, network** | <code>localIp=$(ip1)</code>[**`...`**](../standard_functions#L1892-L1923) | Print ssh port status of local devices and ping google.
 
 ###  Wireless 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**woff** | <code>sudo rfkill blo</code>[**`...`**](../standard_functions#L1927-L1932) | Block wireless device.
-**won** | <code>sudo rfkill unb</code>[**`...`**](../standard_functions#L1935-L1940) | Unblock wireless device.
-**wr** | <code>woff</code>[**`...`**](../standard_functions#L1943-L1946) | Reset wireless device.
-**up** | <code>sudo ifconfig w</code>[**`...`**](../standard_functions#L1949-L1951) | Activate wireless interface.
-**down** | <code>sudo ifconfig w</code>[**`...`**](../standard_functions#L1954-L1956) | Deactivate wireless interface.
-**wlan** | <code>sudo iwlist wla</code>[**`...`**](../standard_functions#L1959-L1969) | Print wireless networks in range.
+**woff** | <code>sudo rfkill blo</code>[**`...`**](../standard_functions#L1931-L1936) | Block wireless device.
+**won** | <code>sudo rfkill unb</code>[**`...`**](../standard_functions#L1939-L1944) | Unblock wireless device.
+**wr** | <code>woff</code>[**`...`**](../standard_functions#L1947-L1950) | Reset wireless device.
+**up** | <code>sudo ifconfig w</code>[**`...`**](../standard_functions#L1953-L1955) | Activate wireless interface.
+**down** | <code>sudo ifconfig w</code>[**`...`**](../standard_functions#L1958-L1960) | Deactivate wireless interface.
+**wlan** | <code>sudo iwlist wla</code>[**`...`**](../standard_functions#L1963-L1973) | Print wireless networks in range.
 
 ###  Internet 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**i, www, internet** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1977-L1979) | Start default browser in background.
-**fire** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1982-L1984) | Start firefox in background.
-**chrome** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1989-L1991) | Start chrome in background.
-**lynx1** | <code>lynx -accept_al</code>[**`...`**](../standard_functions#L1997-L1999) | Start terminal web browser.
+**i, www, internet** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1981-L1983) | Start default browser in background.
+**fire** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1986-L1988) | Start firefox in background.
+**chrome** | <code>__runCommandInB</code>[**`...`**](../standard_functions#L1993-L1995) | Start chrome in background.
+**lynx1** | <code>lynx -accept_al</code>[**`...`**](../standard_functions#L2001-L2003) | Start terminal web browser.
 
 ###  Audio 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
 **mixer** | <code>alsamixer "$@"</code> | Start terminal volume control.
-**a** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2017-L2019) | Increase volume by six decibels.
-**z** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2022-L2024) | Decrease volume by six decibels.
-**aa** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2027-L2029) | Increase volume by two decibels.
-**zz** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2032-L2034) | Decrease volume by two decibels.
+**a** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2021-L2023) | Increase volume by six decibels.
+**z** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2026-L2028) | Decrease volume by six decibels.
+**aa** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2031-L2033) | Increase volume by two decibels.
+**zz** | <code>___setVolumeTo </code>[**`...`**](../standard_functions#L2036-L2038) | Decrease volume by two decibels.
 
 ###  Framework 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**fu** | <code>"${EDITOR:-nano</code>[**`...`**](../standard_functions#L2042-L2044) | Edit standard functions.
-**rc, al** | <code>"${EDITOR:-nano</code>[**`...`**](../standard_functions#L2047-L2049) | Edit standard rc.
+**fu** | <code>"${EDITOR:-nano</code>[**`...`**](../standard_functions#L2046-L2048) | Edit standard functions.
+**rc, al** | <code>"${EDITOR:-nano</code>[**`...`**](../standard_functions#L2051-L2053) | Edit standard rc.
 
 ###  Ssh Alias 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**sshkey** | <code>#ssh-keygen -t </code>[**`...`**](../standard_functions#L2056-L2059) | Generate ssh key pair.
+**sshkey** | <code>#ssh-keygen -t </code>[**`...`**](../standard_functions#L2060-L2063) | Generate ssh key pair.
 
 ###   Kubectl  
 
