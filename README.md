@@ -7,7 +7,7 @@ They provide **commands that should be in Linux** by default, or just **abbrevia
 
 Collection was made for **Debian** based Linux (**Ubuntu**, **Mint**, ...) with **Gnome** desktop environment, but most commands will work on any system that has _Bash_ shell and _GNU Coreutils_ installed. For **macOS** see [instructions](#how-to-run-on-macos).
 
-There are currently **225 commands**.
+There are currently **226 commands**.
 
 How to…
 -------
@@ -31,7 +31,7 @@ Below is a list of most useful commands. If you want to check out the full list 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**##p** | <code>if [[ $# -eq 0 </code>[**`...`**](standard_functions#L484-L490) | Print working directory or path to file.
+**** | <code>if [[ $# -eq 0 </code>[**`...`**](standard_functions#L484-L490) | Print working directory or path to file.
 **l** | <code>___displayOutpu</code>[**`...`**](standard_functions#L194-L197) | List or display directory contents in pager using short listing format.
 **la** | <code>__listOrDisplay</code>[**`...`**](standard_functions#L209-L212) | List or display all directory contents in pager using short listing format.
 **ll** | <code>___displayOutpu</code>[**`...`**](standard_functions#L204-L207) | List or display directory contents in pager using long listing format.
@@ -65,10 +65,10 @@ Below is a list of most useful commands. If you want to check out the full list 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**gs** | <code>git -c color.st</code>[**`...`**](standard_functions#L1719-L1722) | Print short repository status.
+**gs** | <code>git -c color.st</code>[**`...`**](standard_functions#L1724-L1727) | Print short repository status.
 **gd** | <code>git diff "$@"</code> | Display changes between commits.
-**gl** | <code>git log --graph</code>[**`...`**](standard_functions#L1726-L1728) | Display minimal log of commits.
-**commit** | <code>git commit -am </code>[**`...`**](standard_functions#L1676-L1678) | Commit changed and deleted files with message.
+**gl** | <code>git log --graph</code>[**`...`**](standard_functions#L1731-L1733) | Display minimal log of commits.
+**commit** | <code>git commit -am </code>[**`...`**](standard_functions#L1681-L1683) | Commit changed and deleted files with message.
 **push** | <code>git push "$@"</code> | Push changes to remote repository.
 **pull** | <code>git pull "$@"</code> | Pull changes from remote repository.
 
@@ -76,19 +76,19 @@ Below is a list of most useful commands. If you want to check out the full list 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**pa, pingAll** | <code>ping -c 1 -q $(</code>[**`...`**](standard_functions#L1840-L1844) | Ping gateway and google.
-**ip1** | <code>/sbin/ifconfig </code>[**`...`**](standard_functions#L1812-L1819) | Print internal ip.
-**ip2** | <code>lynx --dump htt</code>[**`...`**](standard_functions#L1822-L1824) | Print external ip.
-**gateway** | <code>route -n \</code>[**`...`**](standard_functions#L1827-L1832) | Print gateways ip.
+**pa, pingAll** | <code>ping -c 1 -q $(</code>[**`...`**](standard_functions#L1845-L1849) | Ping gateway and google.
+**ip1** | <code>/sbin/ifconfig </code>[**`...`**](standard_functions#L1817-L1824) | Print internal ip.
+**ip2** | <code>lynx --dump htt</code>[**`...`**](standard_functions#L1827-L1829) | Print external ip.
+**gateway** | <code>route -n \</code>[**`...`**](standard_functions#L1832-L1837) | Print gateways ip.
 
 ####  Packages 
 
  _Name_        | _Runs_   | _Description_  
 :------------- |:--------:| ----------------
-**update** | <code>sudo apt-get up</code>[**`...`**](standard_functions#L1424-L1426) | Update information about available packages.
+**update** | <code>sudo apt-get up</code>[**`...`**](standard_functions#L1429-L1431) | Update information about available packages.
 **ch, canhaz** | <code>if [[ "$__stand</code>[**`...`**](standard_functions#L1411-L1417) | Install package.
-**ve, version** | <code># Check if pass</code>[**`...`**](standard_functions#L1510-L1527) | Print installed and available version of package or command.
-**wi, whatis1** | <code># Checks if it </code>[**`...`**](standard_functions#L1638-L1662) | Describe package or command or find available packages with part of name or command.
+**ve, version** | <code># Check if pass</code>[**`...`**](standard_functions#L1515-L1532) | Print installed and available version of package or command.
+**wi, whatis1** | <code># Checks if it </code>[**`...`**](standard_functions#L1643-L1667) | Describe package or command or find available packages with part of name or command.
 
 How To Rename Commands
 ----------------------
@@ -149,6 +149,10 @@ brew install findutils --with-default-names
 brew install tree
 ...
 ```
+
+
+
+
 
 
 

@@ -59,16 +59,16 @@ tt : Clear screen andprint directory structure.
 ..... : Go up four directories.
 ...... : Go up five directories.
 ....... : Go up six directories.
-##cdiso : Mount iso and cd into.
+ : Mount iso and cd into.
 
 # FILES #
 
 d : List directories only.
 f : List files only.
 h : List hidden files only.
-##cp : Copy files safely.
-##mv : Move files safely.
-##rm : Delete files safely.
+ : Copy files safely.
+ : Move files safely.
+ : Delete files safely.
 cpdir : Copy directories safely.
 mvdir : Move directories safely.
 rmdir : Delete directories safely.
@@ -80,7 +80,7 @@ fifi : Find in files ignore case.
 
 # PWD #
 
-##p : Print working directory or path to file.
+ : Print working directory or path to file.
 
 # ECHO #
 
@@ -130,7 +130,7 @@ sub : Edit file with sublime text.
 
 root : Switch to root.
 s : Execute command as super user.
-##f, please : Execute last command as super user.
+ : Execute last command as super user.
 sudoCp : Copy files safely as super user.
 smv : Move files safely as super user.
 srm : Delete files safely as super user.
@@ -247,7 +247,8 @@ extension : Describe file extension.
 # PACKAGE MANAGEMENT #
 
 ch, canhaz : Install package.
-pyupdate : Update all conda packages
+notebook : Jupyter notebook.
+pyupdate : Update all conda packages.
 update : Update information about available packages.
 upgrade : Upgrade all packages.
 dist-upgrade : Upgrade all packages intelligently.

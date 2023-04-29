@@ -1416,6 +1416,11 @@ __installPackage() {
   fi
 }
 
+__jupyterNotebook(){
+  echo "token=3926ebf6dae948632831713cee7c21ea35898a4c01a5f0a8"
+  jupyter-notebook --ip 0.0.0.0 --port 8888 --NotebookApp.token 3926ebf6dae948632831713cee7c21ea35898a4c01a5f0a8
+}
+
 __updateAllCondaPackages()
 {
   conda update --all
